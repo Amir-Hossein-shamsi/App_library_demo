@@ -1,0 +1,55 @@
+body{
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Empty_book.jpg/1280px-Empty_book.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.card{
+    margin: 10rem auto;
+    width: 90%;
+    padding: 20px;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 25px;
+    transition: .5s;
+}
+.form-group{
+    transition: .5s;
+}
+.card input{
+    width: 80%;
+    transition: .5s;
+    
+  
+}
+.card input:focus{
+   outline: none;
+   outline-style: dashed;
+   width: 100%;
+}
+.card textarea{
+    width: 80%;
+    transition: .5s;
+}
+.card textarea:focus{
+
+    outline: none;
+    width: 100%;
+    outline-style: dashed;
+
+}
+
+.card:hover body{
+    zoom: 1;
+}
+.card h1{
+    text-align: center;
+    color: white;
+    padding: 10px 5px;
+}
+.card button{
+    margin: 5px auto;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+}
+

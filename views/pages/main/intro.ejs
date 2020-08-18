@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>Book</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'PT Serif', serif;
+        }
+        body{
+            min-height: 200vh;
+        }
+        section{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        section .side{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.nypl.org/sites/default/files/book-op-001.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        section .side#side1{
+           
+           
+            -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+
+
+        }
+        section .side#side2{
+            
+            
+            -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+            clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+
+
+        }
+        .content{
+            background: #000;
+            color: white;
+            padding: 100px;
+            padding-top: 150vh;
+        }
+        .content h1{
+            position: relative;
+            text-align: center;
+            padding-bottom: 20px;
+            
+        }
+        .content p{
+            justify-self: center;
+            text-align: center;
+            font-size: 1.7rem;
+        }
+        .content a{
+            text-decoration: none;
+            color: #2696f3;
+            padding: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="side1" class="side"></div>
+        <div id="side2" class="side"></div>
+    </section>
+    <div class="content">
+       <h1>Welcome to our library</h1> 
+       <p>Nostrud incididunt laboris enim cupidatat in mollit eiusmod cillum dolore esse ipsum officia. 
+        Eiusmod nulla velit ex cupidatat. Sit nostrud culpa non minim sit voluptate quis sint duis consectetur quis aliquip Lorem occaecat.
+        Duis mollit ad tempor voluptate aliquip ullamco voluptate minim ex minim exercitation qui.
+        Laborum qui qui in tempor veniam eu qui et laboris occaecat consectetur labore id.
+        Aliqua ad quis officia tempor est laboris sunt. Nulla Lorem veniam amet deserunt deserunt incididunt voluptate.
+        Commodo quis aute mollit qui fugiat mollit duis nisi qui duis do ea. Irure proident ut proident magna laborum in in et deserunt sint. Minim aliqua irure fugiat sunt. 
+        Commodo cupidatat proident ea sit sunt cupidatat dolore est eu enim ut.
+        Minim velit nulla amet velit sit eiusmod aliqua nisi reprehenderit do. 
+        Nulla anim nisi fugiat voluptate enim non est veniam. Irure aliquip Lorem id ad fugiat sit. 
+        Culpa labore anim aliquip nostrud ullamco Lorem commodo sunt.</p>
+        <a href="/library">Visit our site</a>
+    </div>
+    <script>
+        var side1=document.getElementById('side1')
+            window.addEventListener('scroll',function () {
+            side1.style.left=-2*window.pageYOffset+'px'
+          })
+        var side2=document.getElementById('side2')
+            window.addEventListener('scroll',function () {
+            side2.style.left=2*window.pageYOffset+'px'
+          })
+    </script>
+</body>
+</html>
+
